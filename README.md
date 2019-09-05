@@ -13,6 +13,24 @@ KDynamic need some paths;
 - Where your favorite dark plasma theme located
 - Where your favorite wallpapers which categorized by you
 
+to make your desktop like those
+
+*light theme*
+
+<img src='images/light.png'/>
+
+*light_dark isDark=False*
+
+<img src='images/light_dark_false.png'>
+
+*light_dark isDark=True*
+
+<img src='images/light_dark_true.png'
+
+*night theme*
+
+<img src='images/night.png'/>
+
 
 but don't worry setup.py will make this boring stuff for you
 
@@ -21,7 +39,6 @@ but don't worry setup.py will make this boring stuff for you
 ~$ cd KDynamic
 ~$ python3 setup.py
 ```
-
 
 ## What you need to do for make program run ?
 
