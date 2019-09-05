@@ -4,7 +4,7 @@ import random
 import time
 import os
 
-homedir = os.expanduser('~')
+homedir = os.path.expanduser('~')
 light_dark_txt = '{}/KDynamic/Pictures/light_dark/light_dark.txt'.format(homedir)
 light_plasma_theme = '{}/KDynamic/light_plasma_theme.txt'
 night_plasma_theme = '{}/KDynamic/night_plasma_theme.txt'
