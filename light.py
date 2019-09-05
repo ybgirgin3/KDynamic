@@ -3,7 +3,7 @@
 import os
 import random
 
-homedir = os.expanduser('~')
+homedir = os.path.expanduser('~')
 light_txt_file = '{}/KDynamic/Pictures/light/light.txt'.format(homedir)
 light_plasma_theme = '{}/KDynamic/light_plasma_theme.txt'.format(homedir)
 
