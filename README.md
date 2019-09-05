@@ -25,7 +25,7 @@ to make your desktop like those
 
 *light_dark isDark=True*
 
-<img src='images/light_dark_true.png'
+<img src='images/light_dark_true.png'/>
 
 *night theme*
 
