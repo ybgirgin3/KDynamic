@@ -17,8 +17,11 @@ KDynamic need some paths;
 but don't worry setup.py will make this boring stuff for you
 
 ```sh
+~$ git clone https://github.com/ybgirgin3/KDynamic.git
+~$ cd KDynamic
 ~$ python3 setup.py
 ```
+
 
 ## What you need to do for make program run ?
 
