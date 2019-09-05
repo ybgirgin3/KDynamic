@@ -35,9 +35,9 @@ to make your desktop like these
 but don't worry setup.py will make this boring stuff for you
 
 ```sh
-~$ git clone https://github.com/ybgirgin3/KDynamic.git
-~$ cd KDynamic
-~$ python3 setup.py
+~/$ git clone https://github.com/ybgirgin3/KDynamic.git
+~/$ cd KDynamic
+~/$ python3 setup.py
 ```
 
 ## What you need to do for make program run ?
@@ -54,7 +54,7 @@ but don't worry setup.py will make this boring stuff for you
 In KDE Plasma you need to go autostart directory
 
 ```sh
-~$ cd ~/.config/autostart
+~/$ cd ~/.config/autostart
 ```
 
 In this folder you need to move the file which named ***kdynamic.desktop*** and of course you need to change some values in it
@@ -64,7 +64,7 @@ After all things done you need to make 'main.py' file executable by;
 
 
 ```sh
-~$ sudo chmod +x main.py
+~/$ sudo chmod +x main.py
 ```
 command and when you restart your system program will run at startup
 
@@ -77,5 +77,5 @@ command and when you restart your system program will run at startup
 for this run program manuelly;
 
 ```sh
-~$ python3 main.py
+~/$ python3 main.py
 ```
