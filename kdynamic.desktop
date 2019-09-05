@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=KDynamic
+Comment=An Alternative MacOS Mojave Dynamic Theme and Wallpaper Changer for KDE Plasma 5
+Type=Application
+Terminal=False
+Exec=<where this repo locate>/main.py
