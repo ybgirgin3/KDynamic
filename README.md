@@ -42,7 +42,7 @@ but don't worry setup.py will make this boring stuff for you
 
 ## What you need to do for make program run ?
 
-- First things first you need to pick up some wallpapers for each of theme maybe from [unsplash.com](http://unsplash.com) or somewhere you love
+- First things first you need to pick up some wallpapers for each of theme maybe from somewhere you love
 
 - Move images to the specified folders
 
