@@ -1,5 +1,5 @@
 # !/usr/bin/python3
-# Filename: light.py
+# Filename: night.py
 import random
 import os
 
