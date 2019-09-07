@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 import os
 from time import sleep
-
+# import scheduler
 homedir = os.path.expanduser('~')
 
 
@@ -35,7 +35,6 @@ def installer():
     print('[+] done..')
     sleep(.5)
     # create files for light theme
-    print('[+] done..')
     sleep(.5)
     print('[-] KDynamic files creating for light theme wallpapers..')
     os.makedirs('{}/KDynamic/Pictures/light/'.format(homedir))
@@ -80,8 +79,20 @@ def installer():
     txt_creator('night.txt')
     sleep(1)
     print('[+] done..')
+    print('File creating and locating completely done..')
+    sleep(.5)
+    print('Task schedule creating..')
+    sleep(.5)
+    # scheduler.controlling_job()
     print('[+] all done..')
     print('Files located in {}/KDynamic/'.format(homedir))
+    print('After moving your favorite pictures to created directories run this command\n    ~$ python3 scheduler.py')
+
 
 if __name__ == '__main__':
+    print("""
+          KDynamic: KDE Plasma 5 Theme Changer
+          author: Yusuf Berkay Girgin
+
+          """)
     installer()
