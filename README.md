@@ -13,7 +13,7 @@ KDynamic need some paths;
 - Where your favorite dark plasma theme located
 - Where your favorite wallpapers which categorized by you
 
-to make your desktop like these
+to make your desktop like those
 
 *light theme*
 
@@ -25,7 +25,7 @@ to make your desktop like these
 
 *light_dark isDark=True*
 
-<img src='images/light_dark_true.png'/>
+<img src='images/light_dark_true.png'
 
 *night theme*
 
@@ -40,9 +40,17 @@ but don't worry setup.py will make this boring stuff for you
 ~/$ python3 setup.py
 ```
 
+**after installation done run
+
+```sh
+~/$ python3 scheduler.py
+```
+this will add a schedule to Cron and it's will not use your cpu while doing nothing**
+
+
 ## What you need to do for make program run ?
 
-- First things first you need to pick up some wallpapers for each of theme maybe from somewhere you love
+- First things first you need to pick up some wallpapers for each of theme maybe from [unsplash.com](http://unsplash.com) or somewhere you love
 
 - Move images to the specified folders
 
@@ -74,8 +82,12 @@ command and when you restart your system program will run at startup
 
 **Script includes print functions so you can see what's going on while this little script running if you want**
 
-for this run program manually;
+for this run program manuelly;
 
 ```sh
 ~/$ python3 main.py
 ```
+
+## UPDATE V2
+Program will not run in background anymore. Running will happen with Cron the Task Scheduler
+
