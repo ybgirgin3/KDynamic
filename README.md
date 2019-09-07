@@ -2,7 +2,7 @@
 
 ## Description
 
-KDynamic is a multiple python script which makes whole system theme light or dark by specified hours
+KDynamic is a multiple python script which makes whole system theme light or dark by specified hours using cron scheduler
 
 KDynamic uses native KDE Desktop Environment terminal commands so nothing unfamiliar
 
@@ -40,14 +40,6 @@ but don't worry setup.py will make this boring stuff for you
 ~/$ python3 setup.py
 ```
 
-**after installation done run
-
-```sh
-~/$ python3 scheduler.py
-```
-this will add a schedule to Cron and it's will not use your cpu while doing nothing**
-
-
 ## What you need to do for make program run ?
 
 - First things first you need to pick up some wallpapers for each of theme maybe from [unsplash.com](http://unsplash.com) or somewhere you love
@@ -56,6 +48,13 @@ this will add a schedule to Cron and it's will not use your cpu while doing noth
 
 - Make needed changes into the txt file
 
+
+**after installation done and moved favorite wallpapers carefully run**
+
+```sh
+~/$ python3 scheduler.py
+```
+**this will add a schedule to Cron and it's will not use your cpu while doing nothing***
 
 ## ...And what to do for make program run at startup automatically ?
 
@@ -90,4 +89,6 @@ for this run program manuelly;
 
 ## UPDATE V2
 Program will not run in background anymore. Running will happen with Cron the Task Scheduler
+
+
 
