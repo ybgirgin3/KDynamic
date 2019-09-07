@@ -76,7 +76,7 @@ but don't worry setup.py will make this boring stuff for you
 ```
 ~command and when you restart your system program will run at startup~
 
-## No need to move kydynamic file to autostart anymore
+## No need to move kdynamic.desktop file to autostart anymore
 program will already run automatically with Cron
 
 
