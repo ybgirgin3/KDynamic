@@ -21,11 +21,11 @@ to make your desktop like these
 
 *light_dark isDark=False*
 
-<img src='images/light_dark_false.png'>
+<img src='images/light_dark_false.png'/>
 
 *light_dark isDark=True*
 
-<img src='images/light_dark_true.png'
+<img src='images/light_dark_true.png'/>
 
 *night theme*
 
