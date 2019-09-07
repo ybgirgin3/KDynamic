@@ -58,7 +58,7 @@ but don't worry setup.py will make this boring stuff for you
 
 ~## ...And what to do for make program run at startup automatically ?~
 
-~In KDE Plasma you need to go autostart directory ~
+~In KDE Plasma you need to go autostart directory~
 
 ```sh
 ~/$ cd ~/.config/autostart
