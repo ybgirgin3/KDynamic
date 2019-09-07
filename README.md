@@ -13,7 +13,7 @@ KDynamic need some paths;
 - Where your favorite dark plasma theme located
 - Where your favorite wallpapers which categorized by you
 
-to make your desktop like those
+to make your desktop like these
 
 *light theme*
 
