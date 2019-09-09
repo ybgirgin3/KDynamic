@@ -85,7 +85,7 @@ program will already run automatically with Cron
 
 **Script includes print functions so you can see what's going on while this little script running if you want**
 
-for this run program manuelly;
+for this run program manually;
 
 ```sh
 ~/$ python3 main.py
