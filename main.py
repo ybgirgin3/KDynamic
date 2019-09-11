@@ -32,6 +32,7 @@ def main():
         # currentHour = 18
 
         ## light theme
+        # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
             light()
