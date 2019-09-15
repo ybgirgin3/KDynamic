@@ -52,7 +52,7 @@ def controlling_job():
         print('re-creating')
         creating_cron_job()
 
-    elif not a:
+    if not a:
         creating_cron_job()
 
 
