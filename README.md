@@ -91,8 +91,17 @@ for this run program manually;
 ~/$ python3 main.py
 ```
 
-## UPDATE V2
+## UPDATE v2
 Program will not run in background anymore. Running will happen with Cron the Task Scheduler
+
+## UPDATE v3
+Kvantum themes support added !!
+
+Now you can choose which theme type you want to use e.g. for kvantum theme
+
+```sh
+~/$ python kvantum_scheduler.py
+```
 
 
 
