@@ -4,7 +4,7 @@ from time import sleep
 # import scheduler
 homedir = os.path.expanduser('~')
 
-## breeze nad kvantum theme added
+## breeze and kvantum theme added
 
 
 ###### light_plasma txtleri içinde path oluşturucu koy
@@ -90,6 +90,7 @@ def installer():
     print('Files located at {}/KDynamic'.format(homedir))
     # print('After moving your favorite pictures to created directories run this command\n    ~$ python3 scheduler.py')
     print('Run scheduler script of your wished theme type\ne.g: for kvantum themes\n\tpython3 kvantum_scheduler.py')
+    print('Don\'t forget to make changes in <theme>.txt files and <wallpapers>.txt files otherwise program will not work.')
     print("To remove crontab item use 'crontab -r' command")
     print("""
         NOTE: Some Application May Need Restart to Effect Changed Kvantum Theme..
