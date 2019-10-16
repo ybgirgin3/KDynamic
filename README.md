@@ -72,7 +72,7 @@ but don't worry setup.py will make this boring stuff for you
 ~After all things done you need to make 'main.py' file executable by;~
 
 ```sh
-~/$ sudo chmod +x main.py
+~/$ chmod +x main.py
 ```
 ~command and when you restart your system program will run at startup~
 
