@@ -24,6 +24,8 @@ def txt_creator(theme):
 def installer():
     print('! Please wait until process end... !')
     sleep(1)
+    print('Required package "crontab" will install during session !')
+    sleep(.5)
     print('[-] home directory detecting..')
     sleep(2)
     print('[+] done..')
@@ -88,10 +90,11 @@ def installer():
     sleep(1)
     print('[+] all done..')
     print('Files located at {}/KDynamic'.format(homedir))
+    print('Required package installed')
+    os.system('pip3 install crontab')
     # print('After moving your favorite pictures to created directories run this command\n    ~$ python3 scheduler.py')
     print('Run scheduler script of your wished theme type\ne.g: for kvantum themes\n\tpython3 kvantum_scheduler.py')
     print('Don\'t forget to make changes in <theme>.txt files and <wallpapers>.txt files otherwise program will not work.')
-    print("To remove crontab item use 'crontab -r' command")
     print("""
         NOTE: Some Application May Need Restart to Effect Changed Kvantum Theme..
         """)
