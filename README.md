@@ -116,7 +116,7 @@ cd conf && python3 darkconf.py
 and it's done..
 
 
-## This script developed and tested
-  * KDE Plasma 5.17.5
-  * Qt 5.13.2
-  * Kernel 5.3.0-26-generic
+**This script developed and tested on**
+  * **KDE Plasma 5.17.5**
+  * **Qt 5.13.2**
+  * **Kernel 5.3.0-26-generic**
