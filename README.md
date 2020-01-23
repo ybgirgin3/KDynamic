@@ -104,8 +104,11 @@ Now you can choose which theme type you want to use e.g. for kvantum theme
 ```
 ## UPDATE v4
 KDE configuration file modifier has been added.
+
 We can say it's just simply beta extension. So scripts may need some change..
+
 It's force to change system colors via replacing ***~/.config/kdeglobals*** file. So **USE IT YOUR OWN RISK**
+
 to make it work, after your installation done;
 
 i.e for getting dark theme colors;
