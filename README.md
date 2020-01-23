@@ -102,6 +102,14 @@ Now you can choose which theme type you want to use e.g. for kvantum theme
 ```sh
 ~/$ python kvantum_scheduler.py
 ```
+## UPDATE v4
+KDE configuration file modifier has been added.
+It's force to change system colors via replacing ***~/.config/kdeglobals*** file. So **USE IT YOUR OWN RISK**
+to make it work, after your installation done;
 
+i.e for getting dark theme colors;
 
-
+```sh
+cd conf && python3 darkconf.py
+```
+and it's done..
