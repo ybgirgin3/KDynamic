@@ -4,7 +4,7 @@
 
 KDynamic is a multiple python script which makes whole system theme light or dark by specified hours using cron scheduler
 
-KDynamic uses native KDE Desktop Environment terminal commands so nothing unfamiliar
+KDynamic uses native K Desktop Environment (KDE) terminal commands so nothing unfamiliar
 
 ## Configuration
 
