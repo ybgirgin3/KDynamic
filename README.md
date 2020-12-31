@@ -56,29 +56,6 @@ but don't worry setup.py will make this boring stuff for you
 ```
 **this will add a schedule to Cron and it's will not use your cpu while doing nothing***
 
-~## ...And what to do for make program run at startup automatically ?~
-
-~In KDE Plasma you need to go autostart directory~
-
-```sh
-~/$ cd ~/.config/autostart
-```
-
-~In this folder you need to move the file which named ***kdynamic.desktop*** and of course you need to change some values in it~
-
-
-
-
-~After all things done you need to make 'main.py' file executable by;~
-
-```sh
-~/$ chmod +x main.py
-```
-~command and when you restart your system program will run at startup~
-
-## No need to move kdynamic.desktop file to autostart anymore
-program will already run automatically with Cron
-
 
 **This script created with python3**
 
