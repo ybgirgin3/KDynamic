@@ -1,4 +1,5 @@
 .pyc
-.swp
+*.swp
 .desktop.ini
-__pycache__
+__pycache__/
+trash/
