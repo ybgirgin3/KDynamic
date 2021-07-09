@@ -71,7 +71,7 @@ if __name__ == '__main__':
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
     os.makedirs(BASE_DIR)
-    with open(os.path.join(BASE_DIR, 'd_env.txt')) as f:
+    with open(os.path.join(BASE_DIR, 'd_env.txt'), 'w') as f:
         f.write(f'{desk_env}')
     fcreate(desk_env)
 
