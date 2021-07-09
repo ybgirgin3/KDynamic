@@ -30,7 +30,8 @@ h = Path.home()
 #env_spec_dir = os.path.join(h, "KDynamic", "theme", open(d_env, 'r').readline().strip())
 d = os.path.join(h, "KDynamic")
 env_file = open(d + "/d_env.txt").readline().strip().upper()
-env_spec_dir = os.path.join(d, 'theme', env_file)
+# env_spec_dir = os.path.join(d, 'theme', env_file)
+env_spec_dir = os.path.join(d, 'theme')
 t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 def main():
