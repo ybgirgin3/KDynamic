@@ -44,7 +44,7 @@ def main():
         # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
-            light(env_file, [t_json['light'])
+            light(env_file, t_json['light'])
 
 
         ## light_dark theme
