@@ -13,6 +13,7 @@ from light import light_theme   # light theme module
 from datetime import datetime
 from pathlib import Path
 import time
+import json
 import os
 
 ## hours
@@ -34,8 +35,9 @@ d = os.path.join(h, "KDynamic")
 #env_file = open(d + "/d_env.txt").readline().strip().upper()
 # env_spec_dir = os.path.join(d, 'theme', env_file)
 env_spec_dir = os.path.join(d, 'theme')
-t_json = json.loads(os.path.join(env_spec_dir, 'themes.json'),)
-# env_file = t_json['env']
+#t_json = json.load(os.path.join(env_spec_dir, 'themes.json'))
+f = open(os.path.join(env_spec_dir, 'themes.json'))
+data = json.load(f)
 
 def main():
     try:
@@ -47,7 +49,7 @@ def main():
         # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
-            light_theme(t_json['env'], t_json['light'])
+            light_theme(data['env'], data['light'])
 
 
         """
