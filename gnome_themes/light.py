@@ -4,7 +4,11 @@ import os
 from pathlib import Path
 import random
 import sys
-sys.path.insert('..')
+#sys.path.insert('..')
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
 from extra import extra
 
 # configure for gnome themes
