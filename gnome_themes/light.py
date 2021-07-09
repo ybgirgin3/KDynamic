@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 import random
 import sys
-# sys.append('..')
-from ..extra import extra
+sys.path.insert('..')
+from extra import extra
 
 # configure for gnome themes
 #homedir = os.path.expanduser('~')
