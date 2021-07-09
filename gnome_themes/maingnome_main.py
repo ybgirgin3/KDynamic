@@ -7,8 +7,8 @@ for using gnome desktop
 """
 
 from light import *        # light theme module
-#from light_dark import *   # light_dark theme module
-#from night import *        # night theme module
+from light_dark import *   # light_dark theme module
+from night import *        # night theme module
 
 from datetime import datetime
 import time
@@ -34,18 +34,6 @@ env_file = open(d + "/d_env.txt").readline().strip().upper()
 env_spec_dir = os.path.join(d, 'theme')
 t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
-
-def main():
-
-    ## light theme
-    # if currentHour in range(lightHours[0], lightHours[1]+1):
-    #if currentHour >= lightHours[0] and currentHour < lightHours[1]:
-    ## call theme changer func
-    light(env_file, t_json['light'])
-
-
-
-"""
 def main():
     try:
         # returns current hour as a integer
@@ -81,4 +69,3 @@ def main():
     except KeyboardInterrupt as e:
         from sys import exit
         exit(0)
-"""
