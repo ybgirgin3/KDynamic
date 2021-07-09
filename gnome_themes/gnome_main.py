@@ -36,11 +36,11 @@ t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 
 def main():
-
     ## light theme
     # if currentHour in range(lightHours[0], lightHours[1]+1):
     #if currentHour >= lightHours[0] and currentHour < lightHours[1]:
     ## call theme changer func
+    print('ligt')
     light(env_file, t_json['light'])
 
 
@@ -81,4 +81,5 @@ def main():
     except KeyboardInterrupt as e:
         from sys import exit
         exit(0)
+
 """
