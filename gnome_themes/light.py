@@ -25,21 +25,26 @@ plight = os.path.join(h, "KDynamic", "pics", 'light')
 
 ## variables
 def wc(env):
-
     extra.wallp_change(env, random.choice([p for p in os.listdir(plight)]))
+    #print('wc')
 
-def tc(data):
-    extra.theme_changer(env, data)
+def tc(env, data):
+    extra.theme_change(env, data)
+    #print('tc')
 
 
-def light(env, theme):
+def light_theme(env, theme):
     print('light mode activating.. ')
 
     # theme change
     #os.system("kvantummanager --set {}".format(theme))
-    tc(env, data)
+    tc(env, theme)
 
     # change pic
     wc(env)
 
+"""
+if __name__ == '__main__':
+    light_theme(input('env: '), input('theme: '))
+"""
 # end file

@@ -7,9 +7,11 @@ def theme_change(env, data):
     """
 
     if env in ('kde','KDE', 'Kde'):
+        print('kde env')
         cmd = "kvantummanager --set {}".format(data)
 
     elif env in ('gnome', 'GNOME', 'Gnome'):
+        print('gnome env')
         cmd = 'gsettings set org.gnome.desktop.wm.preferences theme "{}"'.format(data)
 
 def wallp_change(env, data):
