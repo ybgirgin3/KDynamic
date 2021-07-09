@@ -50,6 +50,7 @@ def main():
             light_theme(env_file, t_json['light'])
 
 
+        """
         ## light_dark theme
         elif currentHour >= lightHours[1] and currentHour < lightDarkHours[1]:
             # light plasma theme
@@ -68,6 +69,7 @@ def main():
         elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
             # night theme between 15 - 23
             night(env_file, t_json['night'])
+        """
 
     except KeyboardInterrupt as e:
         from sys import exit
