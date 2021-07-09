@@ -40,8 +40,8 @@ def command(n):
 def fcreate(d_env: str) -> None:
     # FOLDERS (parents)
     # create theme folders
-    os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
-    os.makedirs(f"{os_spec_dir}")
+    # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
+    # os.makedirs(f"{os_spec_dir}")
 
     # create pic folders
     for pd in dirs:
@@ -57,7 +57,7 @@ def fcreate(d_env: str) -> None:
         tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
 
     # dump json file
-    with open(f'{os_spec_dir}/themes.json', 'w') as f:
+    with open(f'{THEME_DIR}/themes.json', 'w') as f:
         json.dump(tlist, f)
 
 
