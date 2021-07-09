@@ -43,7 +43,7 @@ def fcreate(d_env: str) -> None:
 
     # create pic folders
     for pd in dirs:
-        os.makedirs(f"{PIC_DIR}}/{pd}")
+        os.makedirs(f"{PIC_DIR}/{pd}")
 
     # PICS and TXTs (childs)
     # create theme files
@@ -63,7 +63,8 @@ if __name__ == '__main__':
     # desktop env selection
     # $DESKTOP_SESSION env finder command
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
-    main(desk_env)
+    os.makedirs(BASE_DIR)
+    fcreate(desk_env)
 
 
         
