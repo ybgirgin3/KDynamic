@@ -66,10 +66,13 @@ if __name__ == '__main__':
     # desktop env selection
     # $DESKTOP_SESSION env finder command
     # install needed libs
-    print('please be sure you installed requirement libs'.upper())
+    from termcolor import colored
+    print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
     os.makedirs(BASE_DIR)
+    with open(os.path.join(BASE_DIR, 'd_env.txt')) as f:
+        f.write(f'{desk_env}')
     fcreate(desk_env)
 
 
