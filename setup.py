@@ -41,7 +41,7 @@ def fcreate(d_env: str) -> None:
     # FOLDERS (parents)
     # create theme folders
     # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
-    # os.makedirs(f"{os_spec_dir}")
+    os.makedirs(f"{THEME_DIR}")
 
     # create pic folders
     for pd in dirs:
