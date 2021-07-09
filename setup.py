@@ -40,12 +40,13 @@ def command(n):
 def fcreate(d_env: str) -> None:
     # FOLDERS (parents)
     # create theme folders
-    os_spec_dir = f"{THEME_DIR}/{d_env}" 
+    os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
     os.makedirs(f"{os_spec_dir}")
 
     # create pic folders
     for pd in dirs:
         os.makedirs(f"{PIC_DIR}/{pd}")
+        # create command txt to pic in pic folder
 
     # PICS and TXTs (childs)
     # create theme files
@@ -64,6 +65,9 @@ def fcreate(d_env: str) -> None:
 if __name__ == '__main__':
     # desktop env selection
     # $DESKTOP_SESSION env finder command
+    # install needed libs
+    print('please be sure you installed requirement libs'.upper())
+    sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
     os.makedirs(BASE_DIR)
     fcreate(desk_env)
