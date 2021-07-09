@@ -8,9 +8,9 @@ import json
 
 #h = os.path.expanduser('~')
 h = Path.home()
-BASE_DIR = os.path.join(h, "/KDynamic")
-THEME_DIR = os.path.join(BASE_DIR, "/theme")
-PIC_DIR = os.path.join(BASE_DIR, "/pics/")
+BASE_DIR = os.path.join(h, "KDynamic")
+THEME_DIR = os.path.join(BASE_DIR, "theme")
+PIC_DIR = os.path.join(BASE_DIR, "pics/")
 
 # paths
 dirs = ["light", "night", "light_dark"]
