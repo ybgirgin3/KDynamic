@@ -56,6 +56,8 @@ def fcreate(d_env: str) -> None:
         #tlist.append(input(f"{dirs[count]} theme name: "))
         tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
 
+    # add env name to theme json
+    tlist['env'] = d_env
     # dump json file
     with open(f'{THEME_DIR}/themes.json', 'w') as f:
         json.dump(tlist, f)
@@ -71,8 +73,6 @@ if __name__ == '__main__':
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
     os.makedirs(BASE_DIR)
-    with open(os.path.join(BASE_DIR, 'd_env.txt'), 'w') as f:
-        f.write(f'{desk_env.upper()}')
     fcreate(desk_env)
 
 
