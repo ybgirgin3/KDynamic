@@ -1,47 +1,41 @@
 # !/usr/bin/python3
 # Filename: light.py
 import os
+from pathlib import Path
 import random
+import sys
+# sys.append('..')
+from ..extra import extra
 
 # configure for gnome themes
-homedir = os.path.expanduser('~')
-light_txt_file = '{}/KDynamic/Pictures/light/light.txt'.format(homedir)
-light_gtk_theme = '{}/KDynamic/Gnome/light_gtk_theme.txt'.format(homedir)
+#homedir = os.path.expanduser('~')
+h = Path.home()
+#env_spec_dir = os.path.join(h, "KDynamic", "theme", open(d_env, 'r').readline().strip())
+
+# pic paths
+plight = os.path.join(h, "KDynamic", "pics", 'light')
+#env_file = open(d + "/d_env.txt").readline().strip().upper()
+#env_spec_dir = os.path.join(d, 'theme', env_file)
+#t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
+
 
 ## variables
-one_time_wallpapers = []
-# one_time_plasma = []
+def wc(env):
 
-def light():
+    extra.wallp_change(env, random.choice([p for p in os.listdir(plight)]))
+
+def tc(data):
+    extra.theme_changer(env, data)
+
+
+def light(env, theme):
     print('light mode activating.. ')
 
-    ## change wallpapers
-    ## find wallpapers directory
-    with open(light_txt_file, 'r') as f:
-        r = f.readlines()
-        for line in r:
-            one_time_wallpapers.append(line)
+    # theme change
+    #os.system("kvantummanager --set {}".format(theme))
+    tc(env, data)
 
-    randomLine = random.choice(one_time_wallpapers)
-
-    # print(randomLine)
-    os.system(randomLine)
-
-    print('light theme')
-    ## changing plasma theme
-    # specified light theme plasma theme
-    # os.system("kwriteconfig5 --file ~/.config/plasmarc --group Theme --key name Mojave-light")
-    with open(light_gtk_theme, 'r') as f:
-        r = f.readlines()
-        for line in r:
-            # one_time_plasma.append(line)
-            # os.system("kwriteconfig5 --file ~/.config/plasmarc --group Theme --key name {}".format(line))
-            #os.system("kvantummanager --set {}".format(line))
-            os.system("gsettings set org.gnome.desktop.interface gtk-theme {}".format(line))
-
-
-    # clean the list
-    # avoiding overwriting
-    one_time_wallpapers.clear()
+    # change pic
+    wc(env)
 
 # end file

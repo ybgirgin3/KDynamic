@@ -25,6 +25,13 @@ nightHours = [23, 6]
 #  --------> 0   1   2   3
 # minutes = [0, 29, 30, 59]
 
+# read paths and files
+h = Path.home()
+#env_spec_dir = os.path.join(h, "KDynamic", "theme", open(d_env, 'r').readline().strip())
+d = os.path.join(h, "KDynamic")
+env_file = open(d + "/d_env.txt").readline().strip().upper()
+env_spec_dir = os.path.join(d, 'theme', env_file)
+t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 def main():
     try:
@@ -36,7 +43,7 @@ def main():
         # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
-            light()
+            light(env_file, [t_json['light'])
 
 
         ## light_dark theme
@@ -44,20 +51,19 @@ def main():
             # light plasma theme
             if currentHour >= lightHours[1] and currentHour < lightDarkHours[0]:
                 ## between 15 - 19
-                light_dark(isDark = False)
+                #light_dark(isDark = False)
+                light_dark(env_file, t_json['light_dark'], isDark = False)
 
             # dark plasma theme
             elif currentHour >= lightDarkHours[0] and currentHour < lightDarkHours[1]:
                 ## between 19 - 21
-                light_dark(isDark = True)
+                light_dark(env_file, t_json['light_dark'], isDark = True)
 
-            # print(waiting1)
-            # commandHandler(waiting1, command1)
 
         # night theme
         elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
             # night theme between 15 - 23
-            night()
+            night(env_file, t_json['night'])
 
     except KeyboardInterrupt as e:
         from sys import exit
