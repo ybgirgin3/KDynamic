@@ -1,11 +1,13 @@
 # !/usr/bin/python3
 import os
 from time import sleep
+from pathlib import Path
 #from tqdm import tqdm
 import json
 # import scheduler
 
-h = os.path.expanduser('~')
+#h = os.path.expanduser('~')
+h = Path.home()
 BASE_DIR = os.path.join(h, "/KDynamic")
 THEME_DIR = os.path.join(BASE_DIR, "/theme")
 PIC_DIR = os.path.join(BASE_DIR, "/pics/")
