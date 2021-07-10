@@ -37,27 +37,33 @@ def command(n):
     """.format(n)
 
 # create folders 
-def fcreate(d_env: str) -> None:
-    # FOLDERS (parents)
-    # create theme folders
-    # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
-    os.makedirs(f"{THEME_DIR}")
+def fcreate(d_env: str, wm=None) -> None:
+    if wm is None:
+        # FOLDERS (parents)
+        # create theme folders
+        # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
+        os.makedirs(f"{THEME_DIR}")
 
-    # create pic folders
-    for pd in dirs:
-        os.makedirs(f"{PIC_DIR}/{pd}")
-        # create command txt to pic in pic folder
+        # create pic folders
+        for pd in dirs:
+            os.makedirs(f"{PIC_DIR}/{pd}")
+            # create command txt to pic in pic folder
 
-    # PICS and TXTs (childs)
-    # create theme files
-    # get theme names
-    # get 3 times
-    for count in range(3):
-        #tlist.append(input(f"{dirs[count]} theme name: "))
-        tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
+        # PICS and TXTs (childs)
+        # create theme files
+        # get theme names
+        # get 3 times
+        for count in range(3):
+            #tlist.append(input(f"{dirs[count]} theme name: "))
+            tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
+            
+        tlist['env'] = d_env
 
-    # add env name to theme json
-    tlist['env'] = d_env
+    elif wm is not None:
+        # add env name to theme json
+        tlist['wm'] = wm
+        
+        
     # dump json file
     with open(f'{THEME_DIR}/themes.json', 'w') as f:
         json.dump(tlist, f)
@@ -72,6 +78,10 @@ if __name__ == '__main__':
     print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
+    if desk_env in ('kde','KDE', 'Kde'):
+        wm = input('Breeze or Kvantum: ')
+        fcreate(desk_env, wm)
+
     os.makedirs(BASE_DIR)
     fcreate(desk_env)
 

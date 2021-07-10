@@ -1,6 +1,6 @@
 import os
 
-def theme_change(env: str, data: str) -> None:
+def theme_change(env: str, data: str, wm=None) -> None:
     """
     env  : desktop env
     data : theme name
@@ -8,11 +8,16 @@ def theme_change(env: str, data: str) -> None:
 
     if env in ('kde','KDE', 'Kde'):
         print('kde env')
-        cmd = "kvantummanager --set {}".format(data)
+        if wm in ('KVANTUM', 'kvantum', 'Kvantum'):
+            cmd = "kvantummanager --set {}".format(data)
+            
+        elif wm in ('BREEZE', 'breeze', 'Breeze'):
+            cmd = "kwriteconfig5 --file ~/.config/plasmarc --group Theme --key name {}".format(data)
 
     elif env in ('gnome', 'GNOME', 'Gnome'):
         print('gnome env')
         cmd = 'gsettings set org.gnome.desktop.interface gtk-theme "{}"'.format(data)
+        
     os.system(cmd)
 
 def wallp_change(env: str, data: str) -> None:
