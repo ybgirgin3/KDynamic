@@ -31,6 +31,7 @@ def tc(env, data, wm):
 
 ## variables
 def wc(env, ts):
+    pd = ""
     if ts == 'light_t':
         pd = plight
     elif ts == 'light_dark_t':
