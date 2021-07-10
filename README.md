@@ -7,7 +7,7 @@ KDynamic is a multiple python script which makes whole system theme light or dar
 KDynamic uses native K Desktop Environment (KDE) terminal commands so nothing unfamiliar
 
 __release details__
-for release details please see [release details](release_details)
+for details please see [CHANGE LOG](CHANGE_LOG)
 
 
 
