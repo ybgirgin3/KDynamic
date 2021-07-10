@@ -28,7 +28,6 @@ def tc(env, data):
     extra.theme_change(env, data)
     #print('tc')
 
-
 ## variables
 def wc(env):
     extra.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
