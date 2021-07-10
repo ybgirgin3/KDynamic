@@ -32,7 +32,7 @@ def wc(env):
     utils.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
     #print('wc')
 
-def main(env, theme, wm):
+def themer(env, theme, wm):
     print('light mode activating.. ')
 
     # theme change
