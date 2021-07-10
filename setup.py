@@ -64,9 +64,8 @@ if __name__ == '__main__':
 
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
-        fcreate(desk_env, wm)
-    else:
-        fcreate(desk_env)
+    else: wm = None
+    fcreate(desk_env, wm)
 
 
         
