@@ -1,9 +1,11 @@
 # !/usr/bin/python3
-import os
-from time import sleep
+from scheduler import controlling_job
 from pathlib import Path
-#from tqdm import tqdm
+from time import sleep
 import json
+import os
+
+#from tqdm import tqdm
 # import scheduler
 
 #h = os.path.expanduser('~')
@@ -65,13 +67,8 @@ if __name__ == '__main__':
 
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
-        if wm in ('Breeze', 'BREEZE', 'breeze'):
-            from breeze_scheduler import controlling_job
-        elif wm in ('KVANTUM', 'Kvantum', 'kvantum'):
-            from kvantum_scheduler import controlling_job
-    else: 
-        wm = ""
-        from gtk_scheduler import controlling_job
+       
+    else: wm = ""
     controlling_job()
     fcreate(desk_env, wm)
 
