@@ -12,7 +12,7 @@ def theme_change(env: str, data: str) -> None:
 
     elif env in ('gnome', 'GNOME', 'Gnome'):
         print('gnome env')
-        cmd = 'gsettings set org.gnome.desktop.wm.preferences theme "{}"'.format(data)
+        cmd = 'gsettings set org.gnome.desktop.interface gtk-theme "{}"'.format(data)
 
 def wallp_change(env: str, data: str) -> None:
     """
