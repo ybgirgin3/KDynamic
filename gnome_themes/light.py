@@ -11,6 +11,7 @@ sys.path.append(parentdir)
 
 from extra import extra
 
+
 # configure for gnome themes
 #homedir = os.path.expanduser('~')
 h = Path.home()
@@ -23,15 +24,15 @@ plight = os.path.join(h, "KDynamic", "pics", 'light')
 #t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 
-## variables
-def wc(env):
-    extra.wallp_change(env, random.choice([p for p in os.listdir(plight)]))
-    #print('wc')
-
 def tc(env, data):
     extra.theme_change(env, data)
     #print('tc')
 
+
+## variables
+def wc(env):
+    extra.wallp_change(env, random.choice([os.path.abspath(p) for p in os.listdir(plight)]))
+    #print('wc')
 
 def light_theme(env, theme):
     print('light mode activating.. ')
