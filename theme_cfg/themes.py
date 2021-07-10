@@ -18,6 +18,8 @@ h = Path.home()
 
 # pic paths
 plight = os.path.join(h, "KDynamic", "pics", 'light')
+plight_dark = os.path.join(h, "KDynamic", "pics", 'light_dark')
+pnight = os.path.join(h, "KDynamic", "pics", 'night')
 #env_file = open(d + "/d_env.txt").readline().strip().upper()
 #env_spec_dir = os.path.join(d, 'theme', env_file)
 #t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
@@ -28,12 +30,11 @@ def tc(env, data, wm):
     #print('tc')
 
 ## variables
-def wc(env):
-    utils.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
+def wc(env, pd):
+    utils.wallp_change(env, os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     #print('wc')
 
-def themer(env, theme, wm):
-    print('light mode activating.. ')
+def themer(env, theme, wm, hour):
 
     # theme change
     #os.system("kvantummanager --set {}".format(theme))

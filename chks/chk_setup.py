@@ -22,7 +22,7 @@ tlist = {}
 
 
 # create folders 
-def fcreate(d_env: str, wm, hours) -> None:
+def fcreate(d_env: str, wm) -> None:
     # FOLDERS (parents)
     # create theme folders
     # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
@@ -39,9 +39,8 @@ def fcreate(d_env: str, wm, hours) -> None:
     # get 3 times
     for count in range(3):
         #tlist.append(input(f"{dirs[count]} theme name: "))
-        tlist[f"{dirs[count]}_t"] = input(f"{dirs[count]} theme name: ")
-        tlist[f"{dirs[count]}_h"] = input(f"{dirs[count]} theme start hour: ")
-    
+        tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
+        
     tlist['env'] = d_env
     tlist['wm'] = wm
         
@@ -60,14 +59,12 @@ if __name__ == '__main__':
     print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
-    hours = [i for i in input("Please enter 3 specific hours at single line (ex: 1 2 3)): ").strip().split()]
     os.makedirs(BASE_DIR)
-    
 
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
     else: wm = ""
-    fcreate(desk_env, wm, hours)
+    fcreate(desk_env, wm)
 
 
         
