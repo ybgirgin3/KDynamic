@@ -1,6 +1,6 @@
 import os
 
-def theme_change(env, data):
+def theme_change(env: str, data: str) -> None:
     """
     env  : desktop env
     data : theme name
@@ -14,7 +14,7 @@ def theme_change(env, data):
         print('gnome env')
         cmd = 'gsettings set org.gnome.desktop.wm.preferences theme "{}"'.format(data)
 
-def wallp_change(env, data):
+def wallp_change(env: str, data: str) -> None:
     """
     env  : desktop env
     data : img path
@@ -38,4 +38,5 @@ def wallp_change(env, data):
         cmd = "gsettings set org.gnome.desktop.background picture-uri file:///{}".format(data)
 
 
+    os.system(cmd)
 

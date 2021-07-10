@@ -31,7 +31,7 @@ def tc(env, data):
 
 ## variables
 def wc(env):
-    extra.wallp_change(env, random.choice([os.path.abspath(p) for p in os.listdir(plight)]))
+    extra.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
     #print('wc')
 
 def light_theme(env, theme):
