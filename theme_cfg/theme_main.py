@@ -46,6 +46,8 @@ def main():
         # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
+            print('light mode activating.. ')
+
             themer(data['env'], data['light'], data['wm'])
 
         
@@ -55,18 +57,24 @@ def main():
             if currentHour >= lightHours[1] and currentHour < lightDarkHours[0]:
                 ## between 15 - 19
                 #light_dark(isDark = False)
+                print('light dark 1 activating.. ')
+
                 themer(data['env'], data['light_dark'], data['wm'])
 
             # dark plasma theme
             elif currentHour >= lightDarkHours[0] and currentHour < lightDarkHours[1]:
                 ## between 19 - 21
+                print('light dark 2 activating.. ')
+
                 themer(data['env'], data['light_dark'], data['wm'])
 
 
         # night theme
         elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
             # night theme between 15 - 23
-            themer(data['env'], data['light'], data['wm'])
+            print('night mode activating.. ')
+
+            themer(data['env'], data['night'], data['wm'])
         
 
     except KeyboardInterrupt as e:
