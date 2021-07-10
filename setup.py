@@ -21,47 +21,29 @@ dirs = ["light", "night", "light_dark"]
 tlist = {}
 #plist = []
 
-# strings
-def command(n):
-    return """
-    dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
-    var Desktops = desktops();
-        for (i=0;i<Desktops.length;i++) {
-        d = Desktops[i];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper",
-                                    "org.kde.image",
-                                    "General");
-        d.writeConfig("Image", "file:///{}");
-    }'
-    """.format(n)
 
 # create folders 
-def fcreate(d_env: str, wm=None) -> None:
-    if wm is None:
-        # FOLDERS (parents)
-        # create theme folders
-        # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
-        os.makedirs(f"{THEME_DIR}")
+def fcreate(d_env: str, wm) -> None:
+    # FOLDERS (parents)
+    # create theme folders
+    # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
+    os.makedirs(f"{THEME_DIR}")
 
-        # create pic folders
-        for pd in dirs:
-            os.makedirs(f"{PIC_DIR}/{pd}")
-            # create command txt to pic in pic folder
+    # create pic folders
+    for pd in dirs:
+        os.makedirs(f"{PIC_DIR}/{pd}")
+        # create command txt to pic in pic folder
 
-        # PICS and TXTs (childs)
-        # create theme files
-        # get theme names
-        # get 3 times
-        for count in range(3):
-            #tlist.append(input(f"{dirs[count]} theme name: "))
-            tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
-            
-        tlist['env'] = d_env
-
-    elif wm is not None:
-        # add env name to theme json
-        tlist['wm'] = wm
+    # PICS and TXTs (childs)
+    # create theme files
+    # get theme names
+    # get 3 times
+    for count in range(3):
+        #tlist.append(input(f"{dirs[count]} theme name: "))
+        tlist[dirs[count]] = input(f"{dirs[count]} theme name: ")
+        
+    tlist['env'] = d_env
+    tlist['wm'] = wm
         
         
     # dump json file
