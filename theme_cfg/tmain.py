@@ -50,20 +50,23 @@ def main():
         if currentHour >= int(data['light_h']) and currentHour < int(data['light_dark_h']):
             print('light mode activating.. ')
             theme = data['light_t']
+            ts = 'light'
         
         ## light_dark theme
         elif currentHour >= int(data['light_dark_h']) and currentHour < int(data['night_h']):
             print('light dark mode activating.. ')
             theme = data['light_dark_t']
+            ts = 'light_dark'
 
 
         # night theme
         elif currentHour >= int(data['night_h']) or currentHour >= 0 and currentHour < int(data['light_h']):
             print('night mode activating.. ')
             theme = data['night_t']
+            ts = 'night'
 
 
-        themer(env, theme, wm)
+        themer(env, theme, wm, ts)
         
 
     except KeyboardInterrupt as e:
