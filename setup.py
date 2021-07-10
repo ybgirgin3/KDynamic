@@ -22,7 +22,7 @@ tlist = {}
 
 
 # create folders 
-def fcreate(d_env: str, wm, hours) -> None:
+def fcreate(d_env: str, wm) -> None:
     # FOLDERS (parents)
     # create theme folders
     # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
     else: wm = ""
-    fcreate(desk_env, wm, hours)
+    fcreate(desk_env, wm)
 
 
         
