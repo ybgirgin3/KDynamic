@@ -47,18 +47,18 @@ def main():
         # currentHour = 18
 
         ## light theme
-        if currentHour >= data['light_h'] and currentHour < data['light_dark_h']:
+        if currentHour >= int(data['light_h']) and currentHour < int(data['light_dark_h']):
             print('light mode activating.. ')
             theme = data['light_t']
         
         ## light_dark theme
-        elif currentHour >= data['light_dark_h'] and currentHour < data['night_h']:
+        elif currentHour >= int(data['light_dark_h']) and currentHour < int(data['night_h']):
             print('light dark mode activating.. ')
             theme = data['light_dark_t']
 
 
         # night theme
-        elif currentHour >= data['night_h'] or currentHour >= 0 and currentHour < data['light_h']:
+        elif currentHour >= int(data['night_h']) or currentHour >= 0 and currentHour < int(data['light_h']):
             print('night mode activating.. ')
             theme = data['night_t']
 
