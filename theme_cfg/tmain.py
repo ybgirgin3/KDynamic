@@ -42,31 +42,28 @@ def main():
     try:
         # returns current hour as a integer
         currentHour = datetime.now().hour
+        env = data['env']
+        wm = data['wm']
         # currentHour = 18
 
         ## light theme
-        # if currentHour in range(lightHours[0], lightHours[1]+1):
-        # if currentHour >= hours[0] and currentHour < hours[1]:
         if currentHour >= data['light_h'] and currentHour < data['light_dark_h']:
-            ## call theme changer func
             print('light mode activating.. ')
-            themer(data['env'], data['light_t'], data['wm'])
-
+            theme = data['light_t']
         
         ## light_dark theme
-        # elif currentHour >= hours[1] and currentHour < hours[2]:
         elif currentHour >= data['light_dark_h'] and currentHour < data['night_h']:
             print('light dark mode activating.. ')
-            themer(data['env'], data['light_dark_t'], data['wm'])
+            theme = data['light_dark_t']
 
 
         # night theme
-        # elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
         elif currentHour >= data['night_h'] or currentHour >= 0 and currentHour < data['light_h']:
-            # night theme between 15 - 23
             print('night mode activating.. ')
+            theme = data['night_t']
 
-            themer(data['env'], data['night'], data['wm'])
+
+        themer(env, theme, wm)
         
 
     except KeyboardInterrupt as e:

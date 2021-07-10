@@ -30,19 +30,25 @@ def tc(env, data, wm):
     #print('tc')
 
 ## variables
-def wc(env, pd):
+def wc(env, ts):
+    if ts == 'light_t':
+        pd = plight
+    elif ts == 'light_dark_t':
+        pd = plight_dark
+    elif ts == 'night_t':
+        pd = pnight
+        
     utils.wallp_change(env, os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     #print('wc')
 
-def themer(env, theme, wm, hour):
+def themer(env, theme, wm):
 
     # theme change
     #os.system("kvantummanager --set {}".format(theme))
     tc(env, theme, wm)
 
     # change pic
-    wc(env)
-
+    wc(env, theme)
     
     
 """
