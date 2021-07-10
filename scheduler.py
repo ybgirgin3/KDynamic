@@ -18,7 +18,7 @@ cron = CronTab(user=user)
 
 ## get current path)
 command = f"/usr/bin/python3 {os.getcwd()}/theme_cfg/tmain.py"
-comment = 'KDynamic: An Alternative to MacOS Mojave Dynamic Theme and Wallpaper Changer - GNOME'
+comment = 'KDynamic: An Alternative to MacOS Mojave Dynamic Theme and Wallpaper Changer'
 # print(command)
 
 ## creating job is done
@@ -42,18 +42,6 @@ def controlling_job():
     for c in cron:
         if c.comment == comment:
             cron.remove(c)
-    # a = cron.find_comment(command)
-    # ## works
-    # if a:
-    #     print('schedule already created.. removing..')
-    #     cron.remove(a)
-    #     print('re-creating')
-    #     creating_cron_job()
-
     creating_cron_job()
 
-
-
-
-# controlling_job()
 # end file
