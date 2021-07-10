@@ -46,33 +46,23 @@ def main():
 
         ## light theme
         # if currentHour in range(lightHours[0], lightHours[1]+1):
-        if currentHour >= hours[0] and currentHour < hours[1]:
+        # if currentHour >= hours[0] and currentHour < hours[1]:
+        if currentHour >= data['light_h'] and currentHour < data['light_dark_h']:
             ## call theme changer func
             print('light mode activating.. ')
-
-            themer(data['env'], data['light'], data['wm'])
+            themer(data['env'], data['light_t'], data['wm'])
 
         
         ## light_dark theme
-        elif currentHour >= hours[1] and currentHour < hours[2]:
-            # light plasma theme
-            if currentHour >= hours[1] and currentHour < hours[2]:
-                ## between 15 - 19
-                #light_dark(isDark = False)
-                print('light dark 1 activating.. ')
-
-                themer(data['env'], data['light_dark'], data['wm'])
-
-            # dark plasma theme
-            elif currentHour >= lightDarkHours[0] and currentHour < lightDarkHours[1]:
-                ## between 19 - 21
-                print('light dark 2 activating.. ')
-
-                themer(data['env'], data['light_dark'], data['wm'])
+        # elif currentHour >= hours[1] and currentHour < hours[2]:
+        elif currentHour >= data['light_dark_h'] and currentHour < data['night_h']:
+            print('light dark mode activating.. ')
+            themer(data['env'], data['light_dark_t'], data['wm'])
 
 
         # night theme
-        elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
+        # elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
+        elif currentHour >= data['night_h'] or currentHour >= 0 and currentHour < data['light_h']:
             # night theme between 15 - 23
             print('night mode activating.. ')
 
