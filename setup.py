@@ -65,7 +65,14 @@ if __name__ == '__main__':
 
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
-    else: wm = ""
+        if wm in ('Breeze', 'BREEZE', 'breeze'):
+            from breeze_scheduler import controlling_job
+        elif wm in ('KVANTUM', 'Kvantum', 'kvantum'):
+            from kvantum_scheduler import controlling_job
+    else: 
+        wm = ""
+        from gtk_scheduler import controlling_job
+    controlling_job()
     fcreate(desk_env, wm)
 
 
