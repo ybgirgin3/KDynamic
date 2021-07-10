@@ -9,8 +9,7 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
-from extra import extra
-
+from utils import utils
 
 # configure for gnome themes
 #homedir = os.path.expanduser('~')
@@ -25,15 +24,15 @@ plight = os.path.join(h, "KDynamic", "pics", 'light')
 
 
 def tc(env, data, wm):
-    extra.theme_change(env, data, wm)
+    utils.theme_change(env, data, wm)
     #print('tc')
 
 ## variables
 def wc(env):
-    extra.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
+    utils.wallp_change(env, os.path.join(plight, random.choice([p for p in os.listdir(plight)])))
     #print('wc')
 
-def light_theme(env, theme, wm):
+def main(env, theme, wm):
     print('light mode activating.. ')
 
     # theme change
@@ -43,6 +42,8 @@ def light_theme(env, theme, wm):
     # change pic
     wc(env)
 
+    
+    
 """
 if __name__ == '__main__':
     light_theme(input('env: '), input('theme: '))

@@ -6,7 +6,7 @@ created at 8 August 2021 09.01 Turkey/Sakarya
 for using gnome desktop
 """
 
-from themes import light_theme#, light_dark_theme, night_theme   # light theme module
+from themes import main as tm#, light_dark_theme, night_theme   # light theme module
 from datetime import datetime
 from pathlib import Path
 import time
@@ -46,28 +46,20 @@ def main():
         # if currentHour in range(lightHours[0], lightHours[1]+1):
         if currentHour >= lightHours[0] and currentHour < lightHours[1]:
             ## call theme changer func
-            light_theme(data['env'], data['light'], data['wm'])
+            tm(data['env'], data['light'], data['wm'])
 
-        """
+        
         ## light_dark theme
         elif currentHour >= lightHours[1] and currentHour < lightDarkHours[1]:
             # light plasma theme
-            if currentHour >= lightHours[1] and currentHour < lightDarkHours[0]:
-                ## between 15 - 19
-                #light_dark(isDark = False)
-                light_dark,_theme(env_file, t_json['light_dark'], isDark = False)
-
-            # dark plasma theme
-            elif currentHour >= lightDarkHours[0] and currentHour < lightDarkHours[1]:
-                ## between 19 - 21
-                light_dark_theme(env_file, t_json['light_dark'], isDark = True)
+            tm(data['env'], data['light_dark'], data['wm'])
 
 
         # night theme
         elif currentHour >= lightDarkHours[1] and currentHour < nightHours[0] or currentHour >= 0 and currentHour < nightHours[1]:
             # night theme between 15 - 23
-            night_theme(env_file, t_json['night'])
-        """
+            tm(data['env'], data['night'], data['wm'])
+        
 
     except KeyboardInterrupt as e:
         from sys import exit
