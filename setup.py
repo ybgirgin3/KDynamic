@@ -16,7 +16,6 @@ PIC_DIR = os.path.join(BASE_DIR, "pics/")
 
 # paths
 dirs = ["light", "night", "light_dark"]
-#pdir = [""pics/light", "pics/night", "pics/light_dark"]
 
 # folder locations
 
