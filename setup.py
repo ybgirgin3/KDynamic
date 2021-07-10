@@ -60,7 +60,6 @@ if __name__ == '__main__':
     print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
-    hours = [i for i in input("Please enter 3 specific hours at single line (ex: 1 2 3)): ").strip().split()]
     os.makedirs(BASE_DIR)
     
 
