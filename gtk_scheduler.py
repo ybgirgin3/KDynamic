@@ -16,9 +16,8 @@ user = os.environ['USER']
 
 cron = CronTab(user=user)
 
-## get current path
-path = os.getcwd()
-command = 'cd {}/gnome_themes && python3 gnome_main.py'.format(path)
+## get current path)
+command = f"/usr/bin/python3 {os.path.abspath(__file__)}/theme_cfg/tmain.py".format(path)
 # print(command)
 
 ## creating job is done
