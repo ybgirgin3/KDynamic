@@ -6,15 +6,8 @@ KDynamic is a multiple python script which makes whole system theme light or dar
 
 KDynamic uses native K Desktop Environment (KDE) terminal commands so nothing unfamiliar
 
-__update__
-* v1.0: 
-  - Breeze Theme Support Added (KDE)
-* v1.1: 
-  - Kvantum Theme Support Added (KDE)
-* v2.0:
-  - Gnome Support Added
-  - More functional, smaller and less modules
-
+__release details__
+for release details please see [release details](release_details)
 
 
 
