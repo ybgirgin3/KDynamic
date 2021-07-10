@@ -19,7 +19,6 @@ dirs = ["light", "night", "light_dark"]
 # folder locations
 
 tlist = {}
-#plist = []
 
 
 # create folders 
@@ -64,7 +63,7 @@ if __name__ == '__main__':
 
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
-    else: wm = None
+    else: wm = ""
     fcreate(desk_env, wm)
 
 

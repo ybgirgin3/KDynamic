@@ -1,6 +1,6 @@
 import os
 
-def theme_change(env: str, data: str, wm=None) -> None:
+def theme_change(env: str, data: str, wm) -> None:
     """
     env  : desktop env
     data : theme name
