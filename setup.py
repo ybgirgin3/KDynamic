@@ -60,12 +60,13 @@ if __name__ == '__main__':
     print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
+    os.makedirs(BASE_DIR)
+
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
         fcreate(desk_env, wm)
-
-    os.makedirs(BASE_DIR)
-    fcreate(desk_env)
+    else:
+        fcreate(desk_env)
 
 
         
