@@ -5,3 +5,6 @@
 * v2.0:
   - Gnome Support Added
   - More functional, less and smaller modules
+
+KNOWN BUGS
+  - After last version release KDE versions of wallpaper changing is not working due KDE terminal commands
