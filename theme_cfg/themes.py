@@ -39,7 +39,8 @@ def wc(env, ts):
         pd = plight_dark
     elif ts == 'night':
         pd = pnight
-        
+    
+    print("image path: ",os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     utils.wallp_change(env, os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     #print('wc')
 
