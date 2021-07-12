@@ -35,9 +35,7 @@ def wallp_change(env: str, data: str) -> None:
         for (i=0;i<Desktops.length;i++) {
             d = Desktops[i];
             d.wallpaperPlugin = "org.kde.image";
-            d.currentConfigGroup = Array("Wallpaper",
-                                        "org.kde.image",
-                                        "General");
+            d.currentConfigGroup = Array("Wallpaper","org.kde.image","General");
             d.writeConfig("Image", "file:///{}");
         }'
         """.format(data))
