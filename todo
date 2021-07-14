@@ -1,3 +1,12 @@
-[+] improve kde desktop 
-[+] add gnome desktop support
-[+] add cinnamon support
+[STANDALONE]
+  [+] add/improve kde desktop 
+  [+] add gnome desktop support
+  [+] add cinnamon support
+
+[DEPENDED]
+  main  --  inner
+  ================
+  ALL       [ ] add icon change support
+  KDE       [ ] add colorscheme change support
+  KDE       [ ] add gtk-theme for gtk application change support
+  KDE       [ ] add windowDecoration change support
