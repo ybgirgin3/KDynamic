@@ -39,17 +39,16 @@ f = open(os.path.join(env_spec_dir, 'themes.json'))
 data = json.load(f)
 
 def notifier(theme):
-    from plyer import notification
-    title = f"current {data['wm']} theme changed to {theme}",
-    message = "Some application may need to restart to apply change"
+    title = "KDynamic"
+    message = f"Current {data['wm']} theme changed to {theme}, Some application may need to restart to apply change"
     timeout = 50
-
-    notification.notify(
+    from pynotifier import Notification
+    Notification(
             title = title,
-            message = message,
-            app_icon = "../images/KDynamicLogo.png",
-            timeout = timeout
-            )
+            description = message,
+            icon_path = 'KDynamicLogo.png',
+            duration = 5,
+            urgency='normal').send()
 
 
 def main():
