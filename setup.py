@@ -60,7 +60,7 @@ if __name__ == '__main__':
     from termcolor import colored
     print(colored('please be sure you installed requirement libs', 'green'))
     sleep(1)
-    desk_env = input('What is your current desktop environment [KDE, GNOME]: ')
+    desk_env = input('What is your current desktop environment [KDE, GNOME, CINNAMON]: ')
     os.makedirs(BASE_DIR)
     
 
