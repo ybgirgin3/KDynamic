@@ -16,7 +16,7 @@ KDynamic is a python script which makes whole system theme light or dark by spec
 - Wallpaper Change
 - Icon Change (need fix)
 
-KDynamic uses native K Desktop Environment (KDE) terminal commands so nothing unfamiliar
+KDynamic uses native Desktop Environment terminal commands so nothing unfamiliar
 
 __release details__
 for details please see [CHANGE LOG](CHANGE_LOG)
