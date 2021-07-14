@@ -1,5 +1,5 @@
-#!/usr/bin/bash
-log "changing wallpaper"
+#!/bin/sh
+#log "changing wallpaper"
 	dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string: 
 		var Desktops = desktops(); 
 			for (i=0;i<Desktops.length;i++){	

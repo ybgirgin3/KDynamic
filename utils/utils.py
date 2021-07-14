@@ -27,14 +27,9 @@ def wallp_change(env: str, data: str) -> None:
     """
 
     if env in ('kde','KDE', 'Kde'):
-        # cmd = f"dbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript \'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = \"org.kde.image\";d.currentConfigGroup = Array(\"Wallpaper", "org.kde.image", "General\");d.writeConfig(\"Image", "file:///{data}\")}"
-        
-        cmd = """
-        dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string: 
-        var Desktops = desktops(); 
-        for (i=0;i<Desktops.length;i++){d = Desktops[i]; d.wallpaperPlugin = "org.kde.image"; d.currentConfigGroup = Array("Wallpaper","org.kde.image","General"); d.writeConfig("Image","file:///{}");}'""".format(data)
-
-        
+        # file running from theme_cfg/tmain.py
+        # so python finds the current dir theme_cfg and can't find walpapers_kde.sh
+        cmd = f"/bin/sh ../utils/wallpaper_kde.sh {data}"
         
 
     elif env in ('gnome', 'GNOME', 'Gnome'):
