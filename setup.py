@@ -21,7 +21,6 @@ dirs = ["light", "night", "light_dark"]
 
 tlist = {}
 
-
 # create folders 
 def fcreate(d_env: str, wm) -> None:
     # FOLDERS (parents)
@@ -43,15 +42,17 @@ def fcreate(d_env: str, wm) -> None:
         tlist[f"{dirs[count]}_t"] = input(f"{dirs[count]} theme name: ")
         tlist[f"{dirs[count]}_h"] = input(f"{dirs[count]} theme start hour: ")
     
+    light_icon = input('Light Icon Theme: ')
+    night_icon = input('Night Icon Theme: ')
+    
     tlist['env'] = d_env
     tlist['wm'] = wm
-        
+    tlist['light_i'] = light_icon
+    tlist['night_i'] = night_icon
         
     # dump json file
     with open(f'{THEME_DIR}/themes.json', 'w') as f:
         json.dump(tlist, f)
-
-
 
 if __name__ == '__main__':
     # desktop env selection
@@ -63,15 +64,9 @@ if __name__ == '__main__':
     desk_env = input('What is your current desktop environment [KDE, GNOME, CINNAMON]: ')
     os.makedirs(BASE_DIR)
     
-
     if desk_env in ('kde','KDE', 'Kde'):
         wm = input('Breeze or Kvantum: ')
-       
     else: wm = ""
     controlling_job()
     fcreate(desk_env, wm)
-
-
-        
-
     
