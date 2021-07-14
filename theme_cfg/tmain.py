@@ -38,6 +38,20 @@ env_spec_dir = os.path.join(d, 'theme')
 f = open(os.path.join(env_spec_dir, 'themes.json'))
 data = json.load(f)
 
+def notifier(theme):
+    from plyer import notification
+    title = f"current {data['wm']} theme changed to {theme}",
+    message = "Some application may need to restart to apply change"
+    timeout = 50
+
+    notification.notify(
+            title = title,
+            message = message,
+            app_icon = "../images/KDynamicLogo.png",
+            timeout = timeout
+            )
+
+
 def main():
     try:
         # returns current hour as a integer
@@ -50,12 +64,14 @@ def main():
         if currentHour >= int(data['light_h']) and currentHour < int(data['light_dark_h']):
             print('light mode activating.. ')
             theme = data['light_t']
+            notifier(theme)
             ts = 'light'
         
         ## light_dark theme
         elif currentHour >= int(data['light_dark_h']) and currentHour < int(data['night_h']):
             print('light dark mode activating.. ')
             theme = data['light_dark_t']
+            notifier(theme)
             ts = 'light_dark'
 
 
@@ -63,6 +79,7 @@ def main():
         elif currentHour >= int(data['night_h']) or currentHour >= 0 and currentHour < int(data['light_h']):
             print('night mode activating.. ')
             theme = data['night_t']
+            notifier(theme)
             ts = 'night'
 
 

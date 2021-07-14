@@ -1,2 +1,3 @@
 python-crontab
 termcolor
+plyer
