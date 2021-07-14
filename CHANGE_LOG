@@ -4,7 +4,12 @@
   - Kvantum Theme Support Added (KDE)
 * v2.0:
   - Gnome Support Added
+  - Cinnamon Support Added
   - More functional, less and smaller modules
 
+
 KNOWN BUGS
+
+
+SOLVED BUGS
   - After last version release KDE versions of wallpaper changing is not working due KDE terminal commands
