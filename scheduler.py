@@ -16,21 +16,16 @@ user = os.environ['USER']
 
 cron = CronTab(user=user)
 
-## get current path
-path = os.getcwd()
-command = 'cd {}/breeze_themes && python3 breeze_main.py'.format(path)
+## get current path)
+command = f"/usr/bin/python3 {os.getcwd()}/theme_cfg/tmain.py"
+comment = 'KDynamic: An Alternative to MacOS Mojave Dynamic Theme and Wallpaper Changer'
 # print(command)
 
 ## creating job is done
 def creating_cron_job():
     ## create job
-    job = cron.new(command=command, comment = 'KDynamic: An Alternative to MacOS Mojave Dynamic Theme and Wallpaper Changer for KDE Plasma 5 - Breeze')
+    job = cron.new(command=command, comment = comment)
 
-    ## çalışmıyor
-    # job = cron.new(command = 'python3 /home/berkay/MEGA/kod/PYTHON/Kendi_Denemelerim/Python_ile_Uygulama_Çalışmaları/Python_Masaüstü_Uygulama_Prototipi_Serisi/PythonProjectsSeries/ThemeChanger/0.3/cron_try/hello.py', comment= 'deneme')
-
-    ## bu alttaki komut çalışıyor
-    # job = cron.new(command = 'touch /tmp/foobar123', comment= 'deneme')
 
     ### ne kadar sürede bir olacak ???
     # job.minute.every(1)
@@ -44,19 +39,9 @@ def creating_cron_job():
 ## controlling if a job existed or not with same name
 # if existed disable it and create new one
 def controlling_job():
-    a = cron.find_comment(command)
-    ## works
-    if a:
-        print('schedule already created.. removing..')
-        cron.remove(a)
-        print('re-creating')
-        creating_cron_job()
+    for c in cron:
+        if c.comment == comment:
+            cron.remove(c)
+    creating_cron_job()
 
-    if not a:
-        creating_cron_job()
-
-
-
-
-controlling_job()
 # end file

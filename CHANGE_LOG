@@ -1,0 +1,10 @@
+* v1.0: 
+  - Breeze Theme Support Added (KDE)
+* v1.1: 
+  - Kvantum Theme Support Added (KDE)
+* v2.0:
+  - Gnome Support Added
+  - More functional, less and smaller modules
+
+KNOWN BUGS
+  - After last version release KDE versions of wallpaper changing is not working due KDE terminal commands
