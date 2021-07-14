@@ -84,7 +84,7 @@ def main():
             ts = 'night'
 
 
-        themer(env, theme, wm, ts, icon)
+        themer(env, theme, wm, ts, icon=None)
         
 
     except KeyboardInterrupt as e:

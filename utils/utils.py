@@ -47,13 +47,19 @@ def wallp_change(env: str, data: str) -> None:
 
 
 def icon_change(env: str, data: str) -> None:
-    if env in ('kde','KDE', 'Kde'):
-        print('pass')
+    # need fix
+    if data is not None:
+        if env in ('kde','KDE', 'Kde'):
+            print('kde icon changes')
+            cmd = "kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme {}"
 
-    elif env in ('gnome', 'GNOME', 'Gnome'):
-        print('gnome icon changes')
-        cmd = "gsettings set org.gnome.desktop.interface icon-theme {}".format(data)
+        elif env in ('gnome', 'GNOME', 'Gnome'):
+            print('gnome icon changes')
+            cmd = "gsettings set org.gnome.desktop.interface icon-theme {}".format(data)
 
+        elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
+            cmd = "gsettings set org.cinnamon.desktop.interface icon-theme {}".format(data)
 
-    os.system(cmd)
+        os.system(cmd)
+    else: pass
 
