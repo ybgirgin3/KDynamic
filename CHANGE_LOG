@@ -5,6 +5,13 @@
 * v2.0:
   - Gnome Support Added
   - More functional, less and smaller modules
+* v2.1:
+  - Cinnamon Supprt Added
+
 
 KNOWN BUGS
+  -  Icon themes not changing right now.. working on it..
+
+
+SOLVED BUGS
   - After last version release KDE versions of wallpaper changing is not working due KDE terminal commands
