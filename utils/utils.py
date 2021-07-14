@@ -17,6 +17,10 @@ def theme_change(env: str, data: str, wm) -> None:
     elif env in ('gnome', 'GNOME', 'Gnome'):
         print('gnome env')
         cmd = 'gsettings set org.gnome.desktop.interface gtk-theme "{}"'.format(data)
+
+    elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
+        print('cinnamon env')
+        cmd = 'gsettings set org.cinnamon.desktop.interface gtk-theme "{}"'.format(data)
         
     os.system(cmd)
 
@@ -34,6 +38,10 @@ def wallp_change(env: str, data: str) -> None:
 
     elif env in ('gnome', 'GNOME', 'Gnome'):
         cmd = "gsettings set org.gnome.desktop.background picture-uri file:///{}".format(data)
+
+
+    elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
+        cmd = "gsettings set org.cinnamon.desktop.background picture-uri file:///{}".format(data)
 
 
     os.system(cmd)
