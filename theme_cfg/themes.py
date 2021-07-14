@@ -26,8 +26,9 @@ pnight = os.path.join(pic_base, 'night')
 #t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 
-def tc(env, data, wm):
+def tc(env, data, wm, icon):
     utils.theme_change(env, data, wm)
+    utils.icon_change(env, icon)
     #print('tc')
 
 ## variables
@@ -44,11 +45,10 @@ def wc(env, ts):
     utils.wallp_change(env, os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     #print('wc')
 
-def themer(env, theme, wm, ts):
+def themer(env, theme, wm, ts, icon):
 
     # theme change
-    #os.system("kvantummanager --set {}".format(theme))
-    tc(env, theme, wm)
+    tc(env, theme, wm, icon)
 
     # change pic
     wc(env, ts)

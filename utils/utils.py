@@ -43,6 +43,17 @@ def wallp_change(env: str, data: str) -> None:
     elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
         cmd = "gsettings set org.cinnamon.desktop.background picture-uri file:///{}".format(data)
 
+    os.system(cmd)
+
+
+def icon_change(env: str, data: str) -> None:
+    if env in ('kde','KDE', 'Kde'):
+        print('pass')
+
+    elif env in ('gnome', 'GNOME', 'Gnome'):
+        print('gnome icon changes')
+        cmd = "gsettings set org.gnome.desktop.interface icon-theme {}".format(data)
+
 
     os.system(cmd)
 
