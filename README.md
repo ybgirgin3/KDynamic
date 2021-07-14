@@ -1,4 +1,4 @@
-<img src="images/KDynamicLogo.gif" style="width: 50px;">
+<img src="images/KDynamicLogo.gif" width=100>
 
 # KDynamic: An Alternative to MacOS Mojave Dynamic Theme and Wallpaper Changer for KDE Plasma 5
 
