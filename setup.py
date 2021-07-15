@@ -2,6 +2,7 @@
 from scheduler import controlling_job
 from pathlib import Path
 from time import sleep
+from utils.utils import word_derivatives
 import json
 import os
 
@@ -64,9 +65,12 @@ if __name__ == '__main__':
     desk_env = input('What is your current desktop environment [KDE, GNOME, CINNAMON]: ')
     os.makedirs(BASE_DIR)
     
-    if desk_env in ('kde','KDE', 'Kde'):
-        wm = input('Breeze or Kvantum: ')
+    #if desk_env in ('kde','KDE', 'Kde'):
+    if 'KDE' in word_derivatives(desk_env).upper():
+        wm = input('Breeze or Kvantum: ').upper()
+        #wm = q if q in word_derivatives(q) else print('nopee')
     else: wm = ""
     controlling_job()
+
     fcreate(desk_env, wm)
     
