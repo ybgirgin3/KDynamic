@@ -26,9 +26,11 @@ pnight = os.path.join(pic_base, 'night')
 #t_json = open(os.path.join(env_spec_dir, 'themes.json'),)
 
 
-def tc(env, data, wm, icon):
+def tc(env, data, wm):#, icon):
     utils.theme_change(env, data, wm)
-    utils.icon_change(env, icon)
+
+    # icon util needs fix
+    #utils.icon_change(env, icon)
     #print('tc')
 
 ## variables
@@ -45,10 +47,10 @@ def wc(env, ts):
     utils.wallp_change(env, os.path.join(pd, random.choice([p for p in os.listdir(pd)])))
     #print('wc')
 
-def themer(env, theme, wm, ts, icon):
+def themer(env, theme, wm, ts):#, icon):
 
     # theme change
-    tc(env, theme, wm, icon)
+    tc(env, theme, wm)#, icon)
 
     # change pic
     wc(env, ts)
