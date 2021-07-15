@@ -42,13 +42,16 @@ def fcreate(env: str, wm) -> None:
         #tlist.append(input(f"{dirs[count]} theme name: "))
         tlist[f"{dirs[count]}_t"] = input(f"{dirs[count]} theme name: ")
         tlist[f"{dirs[count]}_h"] = input(f"{dirs[count]} theme start hour: ")
-    
-    light_icon = input('Light Icon Theme: ')
-    night_icon = input('Night Icon Theme: ')
-    
+
     tlist['env'] = env
     tlist['wm'] = wm
 
+    
+    """
+    light_icon = input('Light Icon Theme: ')
+    night_icon = input('Night Icon Theme: ')
+    """
+    
     """
     tlist['light_i'] = light_icon
     tlist['night_i'] = night_icon
