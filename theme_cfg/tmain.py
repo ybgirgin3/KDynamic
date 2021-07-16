@@ -63,6 +63,7 @@ def main():
         if currentHour >= int(data['light_h']) and currentHour < int(data['light_dark_h']):
             print('light mode activating.. ')
             theme = data['light_t']
+            #icon = data['light_i']
             notifier(theme)
             ts = 'light'
         
@@ -78,11 +79,12 @@ def main():
         elif currentHour >= int(data['night_h']) or currentHour >= 0 and currentHour < int(data['light_h']):
             print('night mode activating.. ')
             theme = data['night_t']
+            #icon = data['night_i']
             notifier(theme)
             ts = 'night'
 
 
-        themer(env, theme, wm, ts)
+        themer(env, theme, wm, ts)#, icon=None)
         
 
     except KeyboardInterrupt as e:

@@ -6,9 +6,16 @@
   - Gnome Support Added
   - Cinnamon Support Added
   - More functional, less and smaller modules
+* v2.1:
+  - Cinnamon Supprt Added
+
 
 
 KNOWN BUGS
+<<<<<<< HEAD
+=======
+  -  Icon themes not changing right now.. working on it..
+>>>>>>> dev
 
 
 SOLVED BUGS

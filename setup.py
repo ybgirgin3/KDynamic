@@ -2,6 +2,7 @@
 from scheduler import controlling_job
 from pathlib import Path
 from time import sleep
+from utils.utils import word_derivatives
 import json
 import os
 
@@ -15,18 +16,17 @@ THEME_DIR = os.path.join(BASE_DIR, "theme")
 PIC_DIR = os.path.join(BASE_DIR, "pics/")
 
 # paths
-dirs = ["light", "night", "light_dark"]
+dirs = ["light", "light_dark", "night"]
 
 # folder locations
 
 tlist = {}
 
-
 # create folders 
-def fcreate(d_env: str, wm) -> None:
+def fcreate(env: str, wm) -> None:
     # FOLDERS (parents)
     # create theme folders
-    # os_spec_dir = f"{THEME_DIR}/{d_env.upper()}" 
+    # os_spec_dir = f"{THEME_DIR}/{env.upper()}" 
     os.makedirs(f"{THEME_DIR}")
 
     # create pic folders
@@ -42,36 +42,40 @@ def fcreate(d_env: str, wm) -> None:
         #tlist.append(input(f"{dirs[count]} theme name: "))
         tlist[f"{dirs[count]}_t"] = input(f"{dirs[count]} theme name: ")
         tlist[f"{dirs[count]}_h"] = input(f"{dirs[count]} theme start hour: ")
-    
-    tlist['env'] = d_env
+
+    tlist['env'] = env
     tlist['wm'] = wm
-        
+
+    
+    """
+    light_icon = input('Light Icon Theme: ')
+    night_icon = input('Night Icon Theme: ')
+    """
+    
+    """
+    tlist['light_i'] = light_icon
+    tlist['night_i'] = night_icon
+    """
         
     # dump json file
     with open(f'{THEME_DIR}/themes.json', 'w') as f:
         json.dump(tlist, f)
 
-
-
 if __name__ == '__main__':
     # desktop env selection
-    # $DESKTOP_SESSION env finder command
     # install needed libs
     from termcolor import colored
-    print(colored('please be sure you installed requirement libs', 'green'))
+    print(colored('please be sure you installed requirement libs', 'red'))
     sleep(1)
     desk_env = input('What is your current desktop environment [KDE, GNOME, CINNAMON]: ')
     os.makedirs(BASE_DIR)
     
-
-    if desk_env in ('kde','KDE', 'Kde'):
-        wm = input('Breeze or Kvantum: ')
-       
+    #if desk_env in ('kde','KDE', 'Kde'):
+    if 'KDE' in word_derivatives(desk_env):
+        wm = input('Breeze or Kvantum: ').upper()
+        #wm = q if q in word_derivatives(q) else print('nopee')
     else: wm = ""
     controlling_job()
+
     fcreate(desk_env, wm)
-
-
-        
-
     
