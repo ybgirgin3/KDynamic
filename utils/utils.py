@@ -1,11 +1,13 @@
 import os
 from itertools import product
 
+# find derivates
 def word_derivatives(word: str) -> list:
     list_ = [(c, c.upper()) if not c.isdigit() else (c,) for c in word.lower()]
     return ["".join(item) for item in product(*list_)]
 
 
+# theme change
 def theme_change(env: str, data: str, wm) -> None:
     """
     env  : desktop env
@@ -35,6 +37,7 @@ def theme_change(env: str, data: str, wm) -> None:
         
     os.system(cmd)
 
+# wallpaper change
 def wallp_change(env: str, data: str) -> None:
     """
     env  : desktop env
@@ -60,6 +63,7 @@ def wallp_change(env: str, data: str) -> None:
     os.system(cmd)
 
 
+# icon change
 def icon_change(env: str, data: str) -> None:
     # need fix, disabled
     if data is not None:
@@ -79,4 +83,40 @@ def icon_change(env: str, data: str) -> None:
 
         os.system(cmd)
     else: pass
+
+# NOTE: only kde utils (for now)
+# colorscheme change
+def color_change(env: str, data: str) -> None:
+    if data is not None:
+        if 'KDE' in word_derivatives(env):
+            print('kde colorscheme changing')
+            cmd = "kwriteconfig5 --file ~/.config/kdeglobals --group General --key ColorScheme '{}'".format(data)
+
+        # NOTE: gnome da renk olarak ayrı bir tema yok
+        #elif 'GNOME' in word_derivatives(env):
+        #    print('gnome colorscheme changing')
+        #        cmd = ""
+
+    os.system(cmd)
+
+
+# gtk apps in kde
+def gtk_theme_for_kde(env: str, data: str) -> None:
+    print('gtk apps specific theme changing')
+    if 'KDE' in word_derivatives(env):
+        cmd = "kwriteconfig5 --file ~/.config/gtk-3.0/settings.ini --group Settings --key gtk-theme-name '$1'"
+
+    os.system(cmd)
+
+
+
+# change plasma theme
+def plasma_theme_change(env: str, data: str) -> None:
+    print('plasma theme changing')
+    if 'KDE' in word_derivatives(env):
+        cmd = "kwriteconfig5 --file ~/.config/plasmarc --group Theme --key name '{}'".format(data)
+
+    os.system(cmd)
+
+
 
