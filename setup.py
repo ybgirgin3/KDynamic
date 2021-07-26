@@ -23,7 +23,7 @@ dirs = ["light", "light_dark", "night"]
 tlist = {}
 
 # create folders 
-def fcreate(env: str, wm) -> None:
+def fcreate(env: str, wm: str) -> None:
     # FOLDERS (parents)
     # create theme folders
     # os_spec_dir = f"{THEME_DIR}/{env.upper()}" 
@@ -42,6 +42,7 @@ def fcreate(env: str, wm) -> None:
         #tlist.append(input(f"{dirs[count]} theme name: "))
         tlist[f"{dirs[count]}_t"] = input(f"{dirs[count]} theme name: ")
         tlist[f"{dirs[count]}_h"] = input(f"{dirs[count]} theme start hour: ")
+        tlist[f"{dirs[count]}_colorscheme"] = input(f"{dirs[count]} colorscheme: ")
 
     tlist['env'] = env
     tlist['wm'] = wm

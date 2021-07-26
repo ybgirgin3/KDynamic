@@ -64,25 +64,25 @@ def wallp_change(env: str, data: str) -> None:
 
 
 # icon change
-def icon_change(env: str, data: str) -> None:
-    # need fix, disabled
-    if data is not None:
-        #if env in ('kde','KDE', 'Kde'):
-        if 'KDE' in word_derivatives(env):
-            print('kde icon changes')
-            cmd = "kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme {}"
-
-        #elif env in ('gnome', 'GNOME', 'Gnome'):
-        elif 'GNOME' in word_derivatives(env):
-            print('gnome icon changes')
-            cmd = "gsettings set org.gnome.desktop.interface icon-theme {}".format(data)
-
-        #elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
-        elif 'CINNAMON' in word_derivatives(env):
-            cmd = "gsettings set org.cinnamon.desktop.interface icon-theme {}".format(data)
-
-        os.system(cmd)
-    else: pass
+#def icon_change(env: str, data: str) -> None:
+#    # need fix, disabled
+#    if data is not None:
+#        #if env in ('kde','KDE', 'Kde'):
+#        if 'KDE' in word_derivatives(env):
+#            print('kde icon changes')
+#            cmd = "kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme {}"
+#
+#        #elif env in ('gnome', 'GNOME', 'Gnome'):
+#        elif 'GNOME' in word_derivatives(env):
+#            print('gnome icon changes')
+#            cmd = "gsettings set org.gnome.desktop.interface icon-theme {}".format(data)
+#
+#        #elif env in ('cinnamon', 'CINNAMON', 'Cinnamon'):
+#        elif 'CINNAMON' in word_derivatives(env):
+#            cmd = "gsettings set org.cinnamon.desktop.interface icon-theme {}".format(data)
+#
+#        os.system(cmd)
+#    else: pass
 
 # NOTE: only kde utils (for now)
 # colorscheme change
